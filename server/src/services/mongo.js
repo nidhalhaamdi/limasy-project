@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const MONGO_URL = process.env.MONGO_URL;
+const { MONGO_URL } = require('../config');
 
 // connection Property : event emitter that emits events when connection is ready (if succeded)
 mongoose.connection.once('open', () => {
