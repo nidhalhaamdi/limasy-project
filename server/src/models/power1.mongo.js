@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
-const powerSchema = new mongoose.Schema({
+const line1Schema = new mongoose.Schema({
     data: {
         type: String,
         required: true,
     }
 });
 
-module.exports = mongoose.model('power', powerSchema);
+module.exports = mongoose.model('line1', line1Schema);

@@ -26,7 +26,7 @@ const signUp = async (req, res) => {
 
         res.status(201).json({
             token: `Bearer ${token}`,
-            user
+            user,
         });
     } catch (err) {
         res.status(500).json([{ msg: err.message }]);
