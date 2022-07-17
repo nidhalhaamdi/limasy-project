@@ -8,7 +8,6 @@ const api = require('./routes/api');
 
 const app = express();
 
-
 // Global Middlewares
 app.use(cors({
     origin: '*'
@@ -27,6 +26,7 @@ app.use(cors({
 //     return callback(null, true);
 //   }
 // }));
+
 
 app.use(morgan('combined')); // a middleware for logging requests
 app.use(express.json());

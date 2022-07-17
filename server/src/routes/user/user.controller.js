@@ -63,6 +63,14 @@ const signIn = async (req, res) => {
     }
 };
 
+const getAuthUser = (req, res) => {
+    try {
+        res.send({ user: req.user });
+    } catch (error) {
+        res.status(401).send([{msg:'Unauthorized'}]);
+    }
+};
+
 const forgotPassword = async (req, res) => {
     try {
         res.send("forgotPWD is ok");
@@ -79,18 +87,10 @@ const resetPassword = async (req, res) => {
     }
 };
 
-const getAuthUser = (req, res) => {
-    try {
-        res.send({ user: req.user });
-    } catch (error) {
-        res.status(401).send([{msg:'Unauthorized'}]);
-    }
-};
-
 module.exports = { 
     signUp, 
     signIn, 
+    getAuthUser, 
     forgotPassword, 
     resetPassword, 
-    getAuthUser, 
 };
