@@ -4,8 +4,8 @@ const jwt = require('jsonwebtoken');
 const config = require('../../config');
 
 const signUp = async (req, res) => {
+    const { firstName, lastName, email, password } = req.body;
     try {
-        const { firstName, lastName, email, password } = req.body;
         let user = await User.findOne({ email });
         if (user) {
             return res.status(400).json({ success: false, msg: "L'email est déjà utilisé" });

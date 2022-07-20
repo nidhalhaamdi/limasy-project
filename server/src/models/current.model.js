@@ -14,7 +14,7 @@ async function getCurrents() {
         '_id': 0, '__v': 0,
     })
     .sort({_id:-1})
-    .limit(6);
+    .limit(20);
 }
 
 module.exports = {
